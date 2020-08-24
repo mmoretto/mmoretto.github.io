@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Presentation_Final</title>
+<title>main</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13993,24 +13993,20 @@ so that, we have established that the model has 1-period finite dependence. This
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>When the errors are type one extreme value, we can use the following relation between the value function, the CCps, and the conditional choice probabilities:
+<li><p>When the errors are type one extreme value, we can use the following relation between the value function, the CCPs, and the conditional choice probabilities:
 \begin{align}
   V_t(x_t) = v_{jt}(x_t) + \gamma - \log P_t(d_t=j|x_t) \ \ \ \forall t = 1, \cdots, T,  \ \ \forall x_{t} \in \mathcal{X} 
 \end{align}</p>
 </li>
 <li><p>Let's now exploit finite dependence. Let's compute the choice conditional value function for action $j=1$, i.e. when you decide to stay at home:
 \begin{align*}
-v_{1t} &amp; = u_H(x<em>t) + \delta V</em>{t+1}(x<em>{t})  \
-&amp; \mbox{Replace } V</em>{t+1} \ \  v_{1t+1} \ \mbox{and the CCPs} \</p>
-
-<pre><code>           &amp; = u_H(x_t) + \delta \left( v_{2t+1}(x_t) + \gamma - \log P_{t+1}(d_{t+1}=2|x_t)  \right) \\   
-</code></pre>
-<p>&amp; \mbox{Telescope } v_{1t+1} \ \</p>
-
-<pre><code>           &amp; = u_H(x_t) + \delta \left[ \lambda(x_t)\left( u_{W}(x_t) + \delta V_{t+2}(x_{t}+1)  \right)  + (1-\lambda(x_t))\left( u_{H}(x_t) + \delta V_{t+2}(x_{t})  \right) + \gamma - \log P_{t+1}(d_{t+1}=2|x_t)  \right] \\ 
-</code></pre>
-<p>&amp; \mbox{Rearrange} \ 
-&amp; =  \delta \lambda(x<em>t)  \left(  \beta</em>{0} + \beta<em>1 x</em>{t}\right)  - \delta \log P<em>{t+1}(d</em>{t+1}=2|x_t)   + \delta \gamma + \delta^2 \lambda(x<em>t)V</em>{t+2}(x_t+1) + \delta^2 (1-\lambda(x<em>t)) V</em>{t+2} (x_t+1)<br>
+v_{1t} &amp; = u_H(x_t) + \delta V_{t+1}(x_{t})  \\
+&amp; \mbox{Replace } V_{t+1} \mbox{ with }  v_{1t+1} \ \mbox{and the CCPs} \\
+&amp; = u_H(x_t) + \delta \left( v_{2t+1}(x_t) + \gamma - \log P_{t+1}(d_{t+1}=2|x_t)  \right) \\   
+&amp; \mbox{Telescope } v_{1t+1}  \\
+&amp; = u_H(x_t) + \delta \left[\lambda(x_t) \left( u_{W}(x_{t}) + \delta V_{t+2} (x_{t}+1)  \right)   + (1-\lambda(x_t))\left( u_{H}(x_t) + \delta V_{t+2}(x_{t})  \right) + \gamma - \log P_{t+1}(d_{t+1}=2|x_t)   \right] \\   
+&amp; \mbox{Rearrange} \\ 
+&amp; =  \delta \lambda(x_t)  \left(  \beta_{0} + \beta_1 x_{t}\right)  - \delta \log P_{t+1}(d_{t+1}=2|x_t)   + \delta \gamma + \delta^2 \lambda(x_t)V_{t+2}(x_t+1) + \delta^2 (1-\lambda(x_t)) V_{t+2} (x_t+1)                                  
 \end{align*}</p>
 </li>
 <li><p>Let's compute the choice conditional value function for action $j=2$, i.e. when you decide to apply for a job:
@@ -14456,7 +14452,7 @@ P(d_{t}=2 |  x_t)_b &amp; \approx \mathcal{N} \left( 1 - \hat{P}(d_{t}=1 |  x_t)
 <li><p>Example: Suppose that we have $I = \lbrace Ann, Beth, Carl, Donnie \rbrace$.
 Resampling with replacement mean that we pick randomly a $|I|$ individuals from the sample, allowing an individual to be picked possibly multiple time.</p>
 <ul>
-<li>$I_{b1} = \lbrace Ann, Ann, Carl, Donnie \rbrace$ </li>
+<li>$I_{b1} = \lbrace Ann, Ann, Carl, Donnie \rbrace$ \</li>
 <li>$I_{b2} = \lbrace Ann, Ann, Carl, Carl \rbrace$</li>
 </ul>
 </li>
